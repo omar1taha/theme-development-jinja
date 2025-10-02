@@ -1,0 +1,39 @@
+.accordion-item {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion-header:hover {
+  background: #e9ecef;
+}
+
+.accordion-content {
+  padding: 1rem;
+  display: none;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.accordion-icon {
+  transition: transform 0.2s;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(45deg);
+}

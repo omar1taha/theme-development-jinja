@@ -1,0 +1,9 @@
+<div class="reviews-summary">
+  <div class="rating-display">
+    {% include 'components/ui/stars-rating.jinja' %}
+    <span class="rating-score">{{ product.rating }}</span>
+  </div>
+  <div class="review-count">
+    Based on {{ product.review_count }} reviews
+  </div>
+</div>

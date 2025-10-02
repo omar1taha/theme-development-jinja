@@ -1,0 +1,12 @@
+<div class="related-products">
+  <h3>Related Products</h3>
+  <div class="product-grid">
+    {% for related_product in product.related_products %}
+    <div class="product-card">
+      <img src="{{ related_product.image }}" alt="{{ related_product.title }}">
+      <h4>{{ related_product.title }}</h4>
+      <p class="price">${{ related_product.price }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>

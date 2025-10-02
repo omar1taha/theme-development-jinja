@@ -1,0 +1,77 @@
+.product-header .product-title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-header .product-vendor {
+  color: #666;
+  margin: 0 0 1rem 0;
+}
+
+.product-pricing {
+  margin: 1rem 0;
+}
+
+.sale-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.regular-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.savings {
+  background: #27ae60;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.variant-selection {
+  margin: 1.5rem 0;
+}
+
+.variant-group {
+  margin-bottom: 1rem;
+}
+
+.variant-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.variant-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.variant-option {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.variant-option:hover {
+  border-color: #007bff;
+}
+
+.variant-option.selected {
+  border-color: #007bff;
+  background: #007bff;
+  color: white;
+}
+
+.variant-option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

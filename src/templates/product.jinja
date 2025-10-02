@@ -1,0 +1,14 @@
+{% extends "layout.jinja" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{product.name}}</h1>
+    <p>Product Detail Page</p>
+    
+    <!-- Debug: Show product data structure -->
+    <details>
+        <summary>Product Data (for reference)</summary>
+        <pre>{{ product | pprint }}</pre>
+    </details>
+</div>
+{% endblock %}

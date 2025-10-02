@@ -1,0 +1,17 @@
+<div class="variant-selection">
+  {% for variant_type, options in product.variants.items() %}
+  <div class="variant-group">
+    <label class="variant-label">{{ variant_type|title }}:</label>
+    <div class="variant-options">
+      {% for option in options %}
+      <button class="variant-option {% if option.disabled %}disabled{% endif %}" 
+              data-variant="{{ variant_type }}" 
+              data-value="{{ option.value }}"
+              {% if option.disabled %}disabled{% endif %}>
+        {{ option.value }}
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

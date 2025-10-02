@@ -1,0 +1,13 @@
+<div class="specs-accordion">
+  {% for spec in product.specs %}
+  <div class="accordion-item">
+    <button class="accordion-header" data-toggle="accordion">
+      {{ spec.title }}
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      {{ spec.content|safe }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
