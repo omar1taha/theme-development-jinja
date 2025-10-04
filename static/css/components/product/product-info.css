@@ -279,7 +279,7 @@
 .color-option {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 5px;
   border: 2px solid #ccc;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -296,8 +296,8 @@
 }
 
 .color-check:checked + .color-option {
-  border-color: #000;
-  border-width: 3px;
+  border-color: #333;
+  border-width: 1.5px;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 

@@ -15,27 +15,26 @@
     <!-- Right Grid: Product Information -->
     <div class="col-lg-6">
       <div class="product-info">
-        {% include 'components/product/product-info/title-vendor.jinja' %}
-
-        {% include 'components/product/product-info/variant-selection.jinja' %}
-        
-        {% include 'components/product/product-info/promotion-list.jinja' %}
+        {% include 'components/product/product-info/title-vendor.jinja' %} {% include
+        'components/product/product-info/variant-selection.jinja' %} {% include
+        'components/product/product-info/promotion-list.jinja' %}
       </div>
     </div>
   </div>
 
   <!-- Product Details Section -->
   <div class="row mt-5">
-    <div class="col-12">
-      {% include 'components/product/details/specs-accordion.jinja' %}
-    </div>
+    <div class="col-12">{% include 'components/product/details/specs-accordion.jinja' %}</div>
   </div>
 
   <!-- Customer Reviews Section -->
   <div class="row mt-2">
-    <div class="col-12">
-      {% include 'components/product/reviews/reviews-summary.jinja' %}
-    </div>
+    <div class="col-12">{% include 'components/product/reviews/reviews-summary.jinja' %}</div>
+  </div>
+
+  <!-- Related Products Section -->
+  <div class="row mt-2">
+    <div class="col-12">{% include 'components/product/related-products/related-products.jinja' %}</div>
   </div>
 </div>
 {% endblock %}

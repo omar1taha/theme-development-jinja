@@ -1,5 +1,175 @@
 <footer class="footer">
+  <div class="footer-main">
     <div class="container">
-        <p>&copy; Lorem Ipsum</p>
+      <div class="row">
+        <!-- NOVA Brand Section -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-xl-0">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Logo"
+                height="40"
+                class="d-inline-block align-text-top"
+              />
+            </div>
+            <p class="footer-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+
+            <div class="social-section">
+              <h6 class="social-title">Follow us</h6>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook" class="social-icon">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" aria-label="Instagram" class="social-icon">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" aria-label="Twitter" class="social-icon">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" aria-label="YouTube" class="social-icon">
+                  <i class="bi bi-youtube"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="app-downloads">
+              <a href="#" class="app-store-btn">
+                <img src="{{ url_for('static', filename='images/App Store.png') }}" alt="Download on App Store" />
+              </a>
+              <a href="#" class="google-play-btn">
+                <img src="{{ url_for('static', filename='images/Google Play.png') }}" alt="Get it on Google Play" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog Section -->
+        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 mb-4 mb-xl-0">
+          <div class="footer-section">
+            <h6 class="footer-title">Catalog</h6>
+            <ul class="footer-links">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Bags</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 mb-4 mb-xl-0">
+          <div class="footer-section">
+            <h6 class="footer-title">Info</h6>
+            <ul class="footer-links">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Track your order</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Our Service Section -->
+        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 mb-4 mb-xl-0">
+          <div class="footer-section">
+            <h6 class="footer-title">Our service</h6>
+            <ul class="footer-links">
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Cookie settings</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-xl-0">
+          <div class="footer-section">
+            <h6 class="footer-title">Subscribe</h6>
+            <p class="newsletter-description">Join our newsletter to stay up to date on features and releases.</p>
+            <form class="newsletter-form">
+              <div class="input-group newsletter-input-group">
+                <input
+                  type="email"
+                  class="form-control newsletter-input"
+                  placeholder="Enter your email"
+                  aria-label="Email address"
+                />
+                <button class="btn newsletter-btn" type="submit">Subscribe</button>
+              </div>
+            </form>
+
+            <div class="contact-info">
+              <h6 class="contact-title">Contact us</h6>
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <span>example@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Saudi Arabia, Riyadh, حي الملقا، طريق الملك فهد</span>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-telephone"></i>
+                <span>+966500000008</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 mb-3 mb-xl-0 order-2 order-xl-1">
+          <div class="copyright">
+            <span>&copy; 2025 Name. All rights reserved. | Powered</span>
+            <span class="zid-logo">
+              <img src="{{ url_for('static', filename='images/Zid Logo.png') }}" alt="Zid Logo" height="16" />
+            </span>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 order-1 order-xl-2">
+          <div class="footer-bottom-right">
+            <div class="payment-methods">
+              <img src="{{ url_for('static', filename='images/Payment icon.png') }}" alt="Apple Pay" class="payment-icon" />
+              <img
+                src="{{ url_for('static', filename='images/Payment icon2.png') }}"
+                alt="Google Pay"
+                class="payment-icon"
+              />
+              <img src="{{ url_for('static', filename='images/Shipment companies.png') }}" alt="Visa" class="payment-icon" />
+              <img
+                src="{{ url_for('static', filename='images/Shipment companies2.png') }}"
+                alt="Mastercard"
+                class="payment-icon"
+              />
+              <img
+                src="{{ url_for('static', filename='images/Shipment companies3.png') }}"
+                alt="Mada"
+                class="payment-icon"
+              />
+              <img src="{{ url_for('static', filename='images/promo5.png') }}" alt="Tabby" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/promo6.png') }}" alt="Tamara" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/promo7.png') }}" alt="Loco" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/promo8.png') }}" alt="SPL" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/promo9.png') }}" alt="SMSA" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/promo10.png') }}" alt="Aramex" class="payment-icon" />
+              <img src="{{ url_for('static', filename='images/vat.png') }}" alt="VAT" class="payment-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

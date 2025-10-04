@@ -1,0 +1,670 @@
+/* Footer Styles */
+.footer {
+  background: #f6f5f4;
+  color: #333333;
+  margin-top: 0;
+  border-top: none;
+}
+
+.footer-main {
+  padding: 60px 0 40px;
+}
+
+.footer-bottom {
+  background-color: #f6f5f4;
+  padding-bottom: 60px;
+}
+
+/* Footer Brand Section */
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: 1px;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+/* Social Section */
+.social-section {
+  margin-bottom: 30px;
+}
+
+.social-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f0efee;
+  color: #333333;
+  transform: translateY(-2px);
+}
+
+.social-icon i {
+  font-size: 16px;
+}
+
+/* App Downloads */
+.app-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-store-btn,
+.google-play-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.app-store-btn img,
+.google-play-btn img {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.app-store-btn:hover img,
+.google-play-btn:hover img {
+  opacity: 0.8;
+}
+
+/* Footer Sections */
+.footer-section {
+  max-width: 200px;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #666666;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #333333;
+}
+
+/* Newsletter Section */
+.newsletter-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  margin-bottom: 30px;
+}
+
+.newsletter-input {
+  background-color: #ffffff;
+  border: 1px solid #d0cecc;
+  color: #333333;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 6px 0 0 6px;
+}
+
+.newsletter-input:focus {
+  background-color: #ffffff;
+  border-color: #333333;
+  color: #333333;
+  box-shadow: none;
+}
+
+.newsletter-input::placeholder {
+  color: #999999;
+}
+
+.newsletter-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0 6px 6px 0;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Contact Info */
+.contact-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333333;
+  width: 20px;
+}
+
+/* Footer Bottom */
+.copyright {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #999999;
+}
+
+.zid-logo {
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.payment-icon {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.vat-number {
+  font-size: 14px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+  .footer-main {
+    padding: 60px 0 40px;
+  }
+  
+  .footer-brand {
+    text-align: left;
+  }
+  
+  .footer-section {
+    text-align: left;
+  }
+  
+  .social-icons {
+    justify-content: flex-start;
+  }
+  
+  .app-downloads {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-bottom-right {
+    justify-content: flex-end;
+  }
+  
+  .payment-methods {
+    justify-content: flex-end;
+  }
+  
+  .copyright {
+    justify-content: flex-start;
+  }
+}
+
+/* Large Devices (992px to 1199px) - Tablet Large */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .footer-main {
+    padding: 50px 0 35px;
+  }
+  
+  .footer-brand {
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .footer-section {
+    text-align: left;
+  }
+  
+  .social-icons {
+    justify-content: flex-start;
+  }
+  
+  .app-downloads {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .footer-bottom-right {
+    justify-content: flex-end;
+  }
+  
+  .payment-methods {
+    justify-content: flex-end;
+  }
+  
+  .copyright {
+    justify-content: flex-start;
+  }
+}
+
+/* Medium Devices (768px to 991px) - Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-main {
+    padding: 40px 0 30px;
+  }
+  
+  .footer-brand {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .footer-section {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .footer-title {
+    font-size: 15px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
+  .footer-description {
+    font-size: 13px;
+  }
+  
+  .newsletter-description {
+    font-size: 13px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .app-downloads {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom-right {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+  }
+  
+  .copyright {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Small Devices (576px to 767px) - Mobile Large */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer-main {
+    padding: 35px 0 25px;
+  }
+  
+  .footer-brand {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .footer-section {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  
+  .footer-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+    font-size: 12px;
+  }
+  
+  .footer-description {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .newsletter-description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .social-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .contact-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .social-icon i {
+    font-size: 15px;
+  }
+  
+  .app-downloads {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .app-store-btn img,
+  .google-play-btn img {
+    height: 36px;
+  }
+  
+  .newsletter-input-group {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .contact-item {
+    font-size: 12px;
+    justify-content: center;
+  }
+  
+  .footer-bottom-right {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .payment-icon {
+    height: 22px;
+  }
+  
+  .copyright {
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+  }
+}
+
+/* Extra Small Devices (575px and below) - Mobile */
+@media (max-width: 575.98px) {
+  .footer-main {
+    padding: 30px 0 20px;
+  }
+  
+  .footer-brand {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  
+  .footer-section {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .footer-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-links a {
+    font-size: 12px;
+  }
+  
+  .footer-description {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .social-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .social-icon i {
+    font-size: 14px;
+  }
+  
+  .app-downloads {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .app-store-btn img,
+  .google-play-btn img {
+    height: 34px;
+  }
+  
+  .newsletter-input-group {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-input {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  
+  .newsletter-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  
+  .contact-item {
+    font-size: 11px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item i {
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    padding-bottom: 40px;
+  }
+  
+  .footer-bottom-right {
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+    gap: 4px;
+    max-width: 100%;
+  }
+  
+  .payment-icon {
+    height: 20px;
+  }
+  
+  .copyright {
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .zid-logo {
+    margin-left: 0;
+  }
+}
+
+/* Very Small Devices (400px and below) - Mobile Small */
+@media (max-width: 399.98px) {
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+  
+  .newsletter-input {
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .newsletter-btn {
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .payment-methods {
+    gap: 3px;
+  }
+  
+  .payment-icon {
+    height: 18px;
+  }
+  
+  .footer-description {
+    font-size: 11px;
+  }
+  
+  .newsletter-description {
+    font-size: 11px;
+  }
+  
+  .footer-links a {
+    font-size: 11px;
+  }
+  
+  .contact-item {
+    font-size: 10px;
+  }
+}
