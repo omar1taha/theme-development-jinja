@@ -459,23 +459,24 @@
   }
 
   /* Responsive pricing styles */
-  .pricing {
+  .product-card .pricing {
     gap: 0.5rem;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
   }
 
-  .current-price {
-    font-size: 18px;
+  .product-card .current-price {
+    font-size: 12px !important;
   }
 
-  .original-price {
-    font-size: 12px;
+  .product-card .original-price {
+    font-size: 9px !important;
   }
 
-  .discount-badge {
-    font-size: 0.625rem;
-    min-width: 60px;
-    height: 24px;
-    padding: 2px 6px;
+  /* Hide discount badge on mobile to prevent layout wrapping */
+  .pricing .discount-badge {
+    display: none !important;
   }
 
   .btn-product-action {
@@ -504,22 +505,6 @@
     font-size: 0.75rem;
   }
 
-  /* Extra small responsive pricing styles */
-  .current-price {
-    font-size: 16px;
-  }
-
-  .original-price {
-    font-size: 11px;
-  }
-
-  .discount-badge {
-    font-size: 0.5625rem;
-    min-width: 50px;
-    height: 22px;
-    padding: 2px 4px;
-  }
-
   /* Navigation controls mobile responsive */
   .slider-navigation {
     max-width: 300px;
@@ -538,7 +523,7 @@
   }
 }
 
-/* Extra small screens - optimize arrow spacing */
+/* Extra small screens - optimize arrow spacing and pricing */
 @media (max-width: 360px) {
   .slider-navigation {
     max-width: 250px;
@@ -553,6 +538,20 @@
   .slider-arrow svg {
     width: 12px;
     height: 12px;
+  }
+
+  /* Extra small responsive pricing styles */
+  .product-card .current-price {
+    font-size: 10px !important;
+  }
+
+  .product-card .original-price {
+    font-size: 8px !important;
+  }
+
+  /* Keep discount badge hidden on extra small screens */
+  .product-card .discount-badge {
+    display: none !important;
   }
 }
 
@@ -616,4 +615,39 @@
   justify-content: center;
   border: none;
   white-space: nowrap;
+}
+
+/* Mobile responsive overrides - placed after global styles to ensure proper cascade */
+@media (max-width: 480px) {
+  .related-products-section .pricing .discount-badge,
+  .product-card .pricing .discount-badge {
+    display: none !important;
+  }
+  
+  .related-products-section .current-price,
+  .product-card .current-price {
+    font-size: 12px !important;
+  }
+  
+  .related-products-section .original-price,
+  .product-card .original-price {
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .related-products-section .pricing .discount-badge,
+  .product-card .pricing .discount-badge {
+    display: none !important;
+  }
+  
+  .related-products-section .current-price,
+  .product-card .current-price {
+    font-size: 10px !important;
+  }
+  
+  .related-products-section .original-price,
+  .product-card .original-price {
+    font-size: 8px !important;
+  }
 }

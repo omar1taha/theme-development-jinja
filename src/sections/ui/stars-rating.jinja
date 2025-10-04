@@ -1,0 +1,69 @@
+{# 
+  Stars Rating Macro
+  
+  Parameters:
+  - rating: (float) The rating value (0-5)
+  - total_count: (int) Optional total number of reviews
+  - show_count: (bool) Whether to show review count (default: false)
+  - show_link: (bool) Whether to show review link (default: false)
+  - link_href: (string) Link URL (default: "#reviews")
+  - link_text: (string) Link text (default: "See reviews")
+  - icon_type: (string) Icon type: "bootstrap" or "html" (default: "html")
+  - wrapper_class: (string) Additional CSS classes for wrapper (default: "")
+  - star_class: (string) Additional CSS classes for stars (default: "")
+  - size: (string) Size variant: "sm", "md", "lg" (default: "md")
+#}
+
+{% macro stars_rating(
+    rating=0, 
+    total_count=None, 
+    show_count=false, 
+    show_link=false, 
+    link_href="#reviews", 
+    link_text="See reviews", 
+    icon_type="html", 
+    wrapper_class="", 
+    star_class="",
+    size="md"
+  ) %}
+  
+  {% set rating_value = rating | float %}
+  {% set full_stars = rating_value | int %}
+  {% set has_half_star = (rating_value - full_stars) >= 0.5 %}
+  {% set empty_stars = 5 - full_stars - (1 if has_half_star else 0) %}
+  
+  <div class="stars-rating {{ wrapper_class }} size-{{ size }}" data-rating="{{ rating_value }}">
+    <div class="stars {{ star_class }}">
+      {% if icon_type == "bootstrap" %}
+        {# Bootstrap Icons Implementation #}
+        {% for i in range(5) %}
+          <i class="bi bi-star{% if i < rating_value %}-fill text-warning{% endif %}"></i>
+        {% endfor %}
+      {% else %}
+        {# HTML Stars Implementation #}
+        {# Full stars #}
+        {% for i in range(full_stars) %}
+          <span class="star filled">★</span>
+        {% endfor %}
+        
+        {# Half star #}
+        {% if has_half_star %}
+          <span class="star half-filled">★</span>
+        {% endif %}
+        
+        {# Empty stars #}
+        {% for i in range(empty_stars) %}
+          <span class="star">★</span>
+        {% endfor %}
+      {% endif %}
+    </div>
+    
+    {% if show_count and total_count %}
+      <span class="review-count">({{ total_count }})</span>
+    {% endif %}
+    
+    {% if show_link %}
+      <a href="{{ link_href }}" class="review-link text-decoration-underline">{{ link_text }}</a>
+    {% endif %}
+  </div>
+{% endmacro %}

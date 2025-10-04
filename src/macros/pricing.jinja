@@ -1,0 +1,140 @@
+{#
+  Comprehensive Pricing Macro
+  
+  This macro handles all pricing display scenarios across the theme:
+  - Current price display (sale price or regular price)
+  - Original price when on sale
+  - Discount percentage calculation and display
+  - Flexible CSS classes and styling options
+  - Support for different product object structures
+  
+  Parameters:
+  - product: Product object containing price information
+  - wrapper_class: Additional CSS classes for the pricing wrapper (optional)
+  - current_price_class: CSS class for current price (default: "current-price")
+  - original_price_class: CSS class for original price (default: "original-price")
+  - discount_badge_class: CSS class for discount badge (default: "discount-badge")
+  - show_discount_badge: Whether to show discount percentage (default: true)
+  - discount_format: Format for discount text (default: "{{ discount_percent }}% OFF")
+  
+  Product object structure expected:
+  - product.formatted_sale_price: Formatted sale price string
+  - product.formatted_price: Formatted regular price string
+  - product.sale_price: Numeric sale price value
+  - product.price: Numeric regular price value
+#}
+
+{% macro pricing(
+  product,
+  wrapper_class="",
+  current_price_class="current-price",
+  original_price_class="original-price", 
+  discount_badge_class="discount-badge",
+  show_discount_badge=true,
+  discount_format=null
+) %}
+
+{# Set default discount format if not provided #}
+{% set discount_text_format = discount_format or "{{ discount_percent }}% OFF" %}
+
+{# Determine if product is on sale #}
+{% set is_on_sale = product.sale_price and product.sale_price < product.price %}
+
+{# Calculate discount percentage if on sale #}
+{% if is_on_sale %}
+  {% set discount_percent = ((product.price - product.sale_price) / product.price * 100) | round %}
+{% endif %}
+
+{# Render pricing structure #}
+<div class="pricing{% if wrapper_class %} {{ wrapper_class }}{% endif %}">
+  {# Current price (sale price if available, otherwise regular price) #}
+  <span class="{{ current_price_class }}">
+    {{ product.formatted_sale_price or product.formatted_price }}
+  </span>
+  
+  {# Original price and discount badge when on sale #}
+  {% if is_on_sale %}
+    <span class="{{ original_price_class }}">{{ product.formatted_price }}</span>
+    
+    {% if show_discount_badge %}
+      <span class="{{ discount_badge_class }}">
+        {% if discount_format %}
+          {{ discount_format.replace('{{ discount_percent }}', discount_percent|string) }}
+        {% else %}
+          {{ discount_percent }}% OFF
+        {% endif %}
+      </span>
+    {% endif %}
+  {% endif %}
+</div>
+
+{% endmacro %}
+
+
+{#
+  Simplified pricing macro for basic use cases
+  
+  This is a shorthand version for the most common pricing scenarios.
+  Uses default styling and shows discount badge.
+  
+  Parameters:
+  - product: Product object containing price information
+  - class: Additional CSS class for wrapper (optional)
+#}
+{% macro simple_pricing(product, class="") %}
+  {{ pricing(product, wrapper_class=class) }}
+{% endmacro %}
+
+
+{#
+  Inline pricing macro for compact displays
+  
+  This version is optimized for smaller spaces like product cards.
+  Uses smaller discount format and can hide discount badge.
+  
+  Parameters:
+  - product: Product object containing price information
+  - wrapper_class: Additional CSS classes for wrapper (optional)
+  - show_discount: Whether to show discount badge (default: true)
+#}
+{% macro inline_pricing(product, wrapper_class="", show_discount=true) %}
+  {{ pricing(
+    product, 
+    wrapper_class=wrapper_class,
+    show_discount_badge=show_discount,
+    discount_format="{{ discount_percent }}% OFF"
+  ) }}
+{% endmacro %}
+
+
+{#
+  Custom pricing macro for specific styling needs
+  
+  This version allows full customization of all CSS classes.
+  Useful for different contexts that need different styling.
+  
+  Parameters:
+  - product: Product object containing price information
+  - current_class: CSS class for current price
+  - original_class: CSS class for original price  
+  - discount_class: CSS class for discount badge
+  - wrapper_class: CSS class for wrapper element
+  - discount_text: Custom discount text format
+#}
+{% macro custom_pricing(
+  product,
+  current_class="current-price",
+  original_class="original-price",
+  discount_class="discount-badge", 
+  wrapper_class="",
+  discount_text=null
+) %}
+  {{ pricing(
+    product,
+    wrapper_class=wrapper_class,
+    current_price_class=current_class,
+    original_price_class=original_class,
+    discount_badge_class=discount_class,
+    discount_format=discount_text
+  ) }}
+{% endmacro %}

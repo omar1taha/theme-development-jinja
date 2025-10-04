@@ -1,3 +1,6 @@
+{% from "sections/ui/stars-rating.jinja" import stars_rating %}
+{% from "macros/pricing.jinja" import pricing %}
+
 <!-- YOU MAY ALSO LIKE Section -->
 <div class="related-products-section">
   <div class="related-products-header">
@@ -45,27 +48,17 @@
               
               <!-- Star rating -->
               <div class="product-rating">
-                <div class="stars-rating">
-                  <span class="star filled">★</span>
-                  <span class="star filled">★</span>
-                  <span class="star filled">★</span>
-                  <span class="star filled">★</span>
-                  <span class="star">★</span>
-                </div>
-                <span class="rating-count">(150)</span>
+                {{ stars_rating(
+                  rating=4,
+                  total_count=150,
+                  show_count=true,
+                  icon_type="html",
+                  wrapper_class="d-flex align-items-center gap-1"
+                ) }}
               </div>
 
               <!-- Price -->
-              <div class="pricing">
-                <span class="current-price">{{ related_product.formatted_sale_price or related_product.formatted_price }}</span>
-                {% if related_product.sale_price and related_product.sale_price < related_product.price %}
-                <span class="original-price">{{ related_product.formatted_price }}</span>
-                <span class="discount-badge">
-                  {% set discount_percent = ((related_product.price - related_product.sale_price) / related_product.price * 100) | round %}
-                  {{ discount_percent }}% OFF
-                </span>
-                {% endif %}
-              </div>
+              {{ pricing(related_product) }}
 
               <!-- Action button -->
               <div class="product-actions">

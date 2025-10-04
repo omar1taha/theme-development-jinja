@@ -10,11 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/product/product-info.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/product/details.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/product/reviews.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/product/related-products.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/ui/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections/product/product-info.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections/product/details.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections/product/reviews.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections/product/related-products.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections/ui/footer.css') }}">
 </head>
 <body>
     {% include 'header.jinja' %}
@@ -27,7 +27,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/components/product-specs-accordion.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/components/related-products-slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sections/product-specs-accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sections/related-products-slider.js') }}"></script>
 </body>
 </html>
