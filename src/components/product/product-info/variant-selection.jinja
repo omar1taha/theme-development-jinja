@@ -1,17 +1,139 @@
-<div class="variant-selection">
-  {% for variant_type, options in product.variants.items() %}
-  <div class="variant-group">
-    <label class="variant-label">{{ variant_type|title }}:</label>
-    <div class="variant-options">
-      {% for option in options %}
-      <button class="variant-option {% if option.disabled %}disabled{% endif %}" 
-              data-variant="{{ variant_type }}" 
-              data-value="{{ option.value }}"
-              {% if option.disabled %}disabled{% endif %}>
-        {{ option.value }}
-      </button>
-      {% endfor %}
+<!-- Variant Selection -->
+<div class="mb-3">
+  <label class="form-label">VARIANT</label>
+  <select class="form-select" id="variant-dropdown" data-variant-type="dropdown">
+    <option value="">Select a variant</option>
+    {% if product.options %} {% for color_option in product.options %} {% if color_option.name == "اللون" %} {% for
+    size_option in product.options %} {% if size_option.name == "Size" %} {% for color in color_option.choices %} {% for size
+    in size_option.choices %}
+    <option value="{{ color }}-{{ size }}" data-color="{{ color }}" data-size="{{ size }}">{{ color }} - {{ size }}</option>
+    {% endfor %} {% endfor %} {% endif %} {% endfor %} {% endif %} {% endfor %} {% else %}
+    <option value="default">Default Variant</option>
+    {% endif %}
+  </select>
+</div>
+
+<!-- Engraving -->
+<div class="mb-3">
+  <label class="form-label">ENGRAVING</label>
+  <input type="text" class="form-control" placeholder="E.g. Emily" />
+</div>
+
+<!-- Size Selection -->
+<div class="mb-3">
+  <label class="form-label">SIZE</label>
+  <div class="size-options" id="size-options" data-variant-type="size">
+    {% if product.options %} {% for option in product.options %} {% if option.name == "Size" %} {% for size in option.choices
+    %} <input type="radio" class="btn-check" name="size" id="size-{{ size.lower() }}" value="{{ size }}" data-size="{{
+      size
+    }}" {% if loop.index == 3 %}checked{% endif %} />
+    <label class="size-button" for="size-{{ size.lower() }}">{{ size }}</label>
+    {% endfor %} {% endif %} {% endfor %} {% else %}
+    <!-- Fallback sizes -->
+    <input type="radio" class="btn-check" name="size" id="size-xs" value="XS" data-size="XS" />
+    <label class="size-button" for="size-xs">XS</label>
+
+    <input type="radio" class="btn-check" name="size" id="size-s" value="S" data-size="S" />
+    <label class="size-button" for="size-s">S</label>
+
+    <input type="radio" class="btn-check" name="size" id="size-m" value="M" data-size="M" checked />
+    <label class="size-button" for="size-m">M</label>
+
+    <input type="radio" class="btn-check" name="size" id="size-l" value="L" data-size="L" />
+    <label class="size-button" for="size-l">L</label>
+
+    <input type="radio" class="btn-check" name="size" id="size-xl" value="XL" data-size="XL" />
+    <label class="size-button" for="size-xl">XL</label>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Color Selection -->
+<div class="mb-3">
+  <label class="form-label">COLOR</label>
+  <div class="d-flex gap-2" id="color-options" data-variant-type="color">
+    {% if product.options %} {% for option in product.options %} {% if option.name == "اللون" %} {% for color in
+    option.choices %} <input type="radio" class="color-check" name="color" id="color-{{ loop.index }}" value="{{ color }}"
+    data-color="{{ color }}" {% if loop.index == 1 %}checked{% endif %} />
+    <label
+      class="color-option"
+      for="color-{{ loop.index }}"
+      style="background-color: {{ color_map.get(color, '#ccc') }};"
+      title="{{ color }}"
+    ></label>
+    {% endfor %} {% endif %} {% endfor %} {% else %}
+    <!-- Fallback colors -->
+    <div class="color-option" style="background-color: #ffd700"></div>
+    <div class="color-option" style="background-color: #da70d6"></div>
+    <div class="color-option" style="background-color: #f5f5dc"></div>
+    <div class="color-option" style="background-color: #ffcccb"></div>
+    <div class="color-option" style="background-color: #93c572"></div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Quantity -->
+<div class="mb-3">
+  <label class="form-label">QUANTITY</label>
+  <div class="d-flex align-items-center gap-3">
+    <div class="quantity-selector">
+      <button class="quantity-btn quantity-decrease" type="button">−</button>
+      <input type="number" class="quantity-input" value="1" min="1" max="99" />
+      <button class="quantity-btn quantity-increase" type="button">+</button>
+    </div>
+    <small class="text-danger">HURRY UP ONLY 10 ITEMS LEFT</small>
+  </div>
+</div>
+
+<!-- Add to Cart Buttons -->
+<div class="d-grid gap-2 w-100">
+  <button class="btn btn-dark btn-lg w-100">Add to cart</button>
+  <button class="btn btn-outline-secondary btn-lg w-100">
+    <span>Buy with</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 21.99C7.78997 22.03 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.13997 6.91 8.85997 6.89C10.15 6.87 11.36 7.74 12.1 7.74C12.83 7.74 14.24 6.65 15.8 6.84C16.47 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"
+      />
+    </svg>
+    <span>Pay</span>
+  </button>
+</div>
+
+<!-- Shipping and Payment Options -->
+<div class="shipping-payment-section mt-4 w-100">
+  <!-- Free Shipping Banner -->
+  <div class="shipping-banner">
+    <div class="d-flex align-items-center justify-content-center gap-2">
+      <!-- Truck Icon -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="shipping-icon">
+        <path
+          d="M3 14H2V13C2 11.9391 2.42143 10.9217 3.17157 10.1716C3.92172 9.42143 4.93913 9 6 9H17V14H16"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M17 14H21L20 9H17V14Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="7" cy="17" r="2" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+      <span class="shipping-text">FREE SHIPPING OVER <strong>500 SAR</strong></span>
+      <span class="separator">|</span>
+      <!-- Clock Icon -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="clock-icon">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="delivery-text">ORDER IN <strong>2H 34M</strong> TO GET IT SHIPPED TODAY</span>
     </div>
   </div>
-  {% endfor %}
 </div>
+
+<!-- External JavaScript for variant selection-->
+<script src="{{ url_for('static', filename='js/components/variant-selection.js') }}"></script>

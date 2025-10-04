@@ -12,6 +12,346 @@
   color: #555;
 }
 
-.specs-accordion {
+/* Product Specs Accordion Styles */
+.product-specs-accordion {
   margin: 2rem 0;
+  border: none;
+}
+
+.product-specs-accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.product-specs-accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.product-specs-accordion .accordion-header {
+  margin-bottom: 0;
+}
+
+.product-specs-accordion .accordion-button {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 0;
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  color: #333;
+  text-transform: uppercase;
+  box-shadow: none;
+  position: relative;
+}
+
+.product-specs-accordion .accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #333;
+  box-shadow: none;
+}
+
+.product-specs-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.product-specs-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+  margin-left: auto;
+}
+
+.product-specs-accordion .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.product-specs-accordion .accordion-body {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-top: none;
+  color: #555;
+  line-height: 1.6;
+}
+
+.product-specs-accordion .accordion-collapse {
+  border: none;
+}
+
+/* Question & Answer specific styling */
+.product-specs-accordion .ask-question-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-right: 1rem !important;
+}
+
+.product-specs-accordion .ask-question-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.product-specs-accordion #qa-heading .accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-specs-accordion #qa-heading .accordion-button span {
+  flex: 1;
+}
+
+/* Features list styling */
+.features-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.features-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Product specifications styling */
+.product-specifications .spec-item {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.product-specifications .spec-item strong {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.product-specifications .spec-description {
+  color: #555;
+  line-height: 1.6;
+}
+
+.product-specifications .spec-description p {
+  margin-bottom: 0;
+}
+
+/* Shipping details styling */
+.shipping-details h6 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.shipping-details h6:first-child {
+  margin-top: 0;
+}
+
+.shipping-details ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.shipping-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Product options styling */
+.product-option {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-option:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Product options grid styling */
+.product-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.75rem 0;
+  gap: 1rem;
+  transition: none;
+}
+
+.option-item:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.option-image {
+  width: 60px;
+  height: 60px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.option-image .image-placeholder {
+  color: #999;
+}
+
+.option-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.option-content {
+  flex: 1;
+}
+
+.option-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.option-variant {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.option-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.option-pricing .current-price {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.option-pricing .original-price {
+  font-size: 0.75rem;
+  color: #dc3545;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.option-item .btn {
+  white-space: nowrap;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-options-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .option-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .option-title {
+    font-size: 1rem;
+  }
+
+  .option-pricing .current-price {
+    font-size: 1rem;
+  }
+
+  .option-pricing .original-price {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-options-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .option-item {
+    padding: 1.25rem;
+  }
+}
+
+/* FAQ styling */
+.faq-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* Q&A styling */
+.qa-item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.qa-item .question {
+  color: #333;
+  font-weight: 500;
+}
+
+.qa-item .answer {
+  color: #555;
+}
+
+/* Ask question form styling */
+.ask-question-form {
+  border-radius: 0.375rem;
+}
+
+.ask-question-form h6 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
 }

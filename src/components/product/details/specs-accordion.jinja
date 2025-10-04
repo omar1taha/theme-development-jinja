@@ -1,13 +1,274 @@
-<div class="specs-accordion">
-  {% for spec in product.specs %}
+<div class="accordion product-specs-accordion" id="productSpecsAccordion">
+  <!-- Features & Details -->
   <div class="accordion-item">
-    <button class="accordion-header" data-toggle="accordion">
-      {{ spec.title }}
-      <span class="accordion-icon">+</span>
-    </button>
-    <div class="accordion-content">
-      {{ spec.content|safe }}
+    <h2 class="accordion-header" id="features-heading">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#features-collapse"
+        aria-expanded="false"
+        aria-controls="features-collapse"
+      >
+        FEATURES & DETAILS
+      </button>
+    </h2>
+    <div
+      id="features-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="features-heading"
+      data-bs-parent="#productSpecsAccordion"
+    >
+      <div class="accordion-body">
+        <div class="product-specifications">
+          <div class="spec-item"><strong>Weight:</strong> 1.2kg</div>
+          <div class="spec-item"><strong>Dimensions:</strong> 12x15x8cm</div>
+          <div class="spec-description mt-3">
+            <p>
+              Ready, set, serve in the Alosoft Encore Tennis Dress. Made from our signature Alosoft fabric, this style has a
+              minimalist silhouette and a built-in onesie for all-in-one ease, offering just the right amount of support,
+              comfort, and stretch. Whether you're hitting the court, the studio, or the sidewalk, this is your power-player
+              piece.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  {% endfor %}
+
+  <!-- Shipping & Returns -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="shipping-heading">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#shipping-collapse"
+        aria-expanded="false"
+        aria-controls="shipping-collapse"
+      >
+        SHIPPING & RETURNS
+      </button>
+    </h2>
+    <div
+      id="shipping-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="shipping-heading"
+      data-bs-parent="#productSpecsAccordion"
+    >
+      <div class="accordion-body">
+        <div class="shipping-details">
+          <p><strong>Delivery is free for all orders over 500 SAR.</strong></p>
+
+          <p>
+            Once your product has shipped, it usually takes 2 to 3 business days in France, 3 to 7 in Europe, 5 to 15 for the
+            rest of the world. If you have not received your products, feel free to contact us using our contact page.
+          </p>
+
+          <p>
+            You can return your product up to 14 days after receiving your order. Please make sure that the products are not
+            worn, washed or damaged.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Options -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="options-heading">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#options-collapse"
+        aria-expanded="false"
+        aria-controls="options-collapse"
+      >
+        PRODUCT OPTIONS
+      </button>
+    </h2>
+    <div
+      id="options-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="options-heading"
+      data-bs-parent="#productSpecsAccordion"
+    >
+      <div class="accordion-body">
+        <div class="product-options-grid">
+          <div class="option-item">
+            <div class="option-image">
+              <div class="image-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="m9 11 3-3 3 3" />
+                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="option-content">
+              <h3 class="option-title">PRODUCT NAME</h3>
+              <p class="option-variant">RED • S • FLOWER</p>
+              <div class="option-pricing">
+                <span class="current-price">890 SAR</span>
+                <span class="original-price">1,200 SAR</span>
+              </div>
+            </div>
+            <button class="btn btn-sm">Add to cart</button>
+          </div>
+
+          <div class="option-item">
+            <div class="option-image">
+              <div class="image-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="m9 11 3-3 3 3" />
+                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="option-content">
+              <h3 class="option-title">PRODUCT NAME</h3>
+              <p class="option-variant">RED • S • FLOWER</p>
+              <div class="option-pricing">
+                <span class="current-price">890 SAR</span>
+                <span class="original-price">1,200 SAR</span>
+              </div>
+            </div>
+            <button class="btn btn-sm">Add to cart</button>
+          </div>
+
+          <div class="option-item">
+            <div class="option-image">
+              <div class="image-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="m9 11 3-3 3 3" />
+                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="option-content">
+              <h3 class="option-title">PRODUCT NAME</h3>
+              <p class="option-variant">RED • S • FLOWER</p>
+              <div class="option-pricing">
+                <span class="current-price">890 SAR</span>
+                <span class="original-price">1,200 SAR</span>
+              </div>
+            </div>
+            <button class="btn btn-sm">Add to cart</button>
+          </div>
+
+          <div class="option-item">
+            <div class="option-image">
+              <div class="image-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="m9 11 3-3 3 3" />
+                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="option-content">
+              <h3 class="option-title">PRODUCT NAME</h3>
+              <p class="option-variant">RED • S • FLOWER</p>
+              <div class="option-pricing">
+                <span class="current-price">890 SAR</span>
+                <span class="original-price">1,200 SAR</span>
+              </div>
+            </div>
+            <button class="btn btn-sm">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faq-heading">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faq-collapse"
+        aria-expanded="false"
+        aria-controls="faq-collapse"
+      >
+        FAQ
+      </button>
+    </h2>
+    <div
+      id="faq-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="faq-heading"
+      data-bs-parent="#productSpecsAccordion"
+    >
+      <div class="accordion-body">
+        <div class="faq-content">
+          <div class="faq-item">
+            <h6 class="faq-question">Question text goes here</h6>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h6 class="faq-question">Question text goes here</h6>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h6 class="faq-question">Question text goes here</h6>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Questions & Answers -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="qa-heading">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#qa-collapse"
+        aria-expanded="false"
+        aria-controls="qa-collapse"
+      >
+        <span>QUESTIONS & ANSWERS</span>
+        <a href="#" class="ask-question-link ms-auto me-3" onclick="event.stopPropagation();">Ask question</a>
+      </button>
+    </h2>
+    <div
+      id="qa-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="qa-heading"
+      data-bs-parent="#productSpecsAccordion"
+    >
+      <div class="accordion-body">
+        <div class="ask-question-form">
+          <h6>Ask your question</h6>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="email" class="form-control" id="questionEmail" placeholder="Email" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="questionName" placeholder="Name" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="questionText" rows="4" placeholder="Enter your question here"></textarea>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="hideNameCheck">
+                <label class="form-check-label" for="hideNameCheck">
+                  Do not show my name in the comments
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-dark">Ask question</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -75,3 +75,732 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Title Vendor Component Styles */
+.product-header {
+  margin-bottom: 2rem;
+}
+
+.product-actions .btn {
+  padding: 0.5rem;
+  color: #333;
+  border: none;
+  background: none;
+}
+
+.product-actions .btn:hover {
+  color: #007bff;
+}
+
+.product-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.product-reviews {
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  gap: 1px;
+}
+
+.stars i {
+  font-size: 0.875rem;
+}
+
+.review-count {
+  margin-left: 0.375rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.review-link {
+  color: #333;
+  text-decoration: underline;
+  margin-left: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.product-badges .badge {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #374151;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.product-badges .badge:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.badge-offer {
+  color: #dc2626;
+}
+
+.badge-offer i {
+  color: #dc2626;
+}
+
+.badge-sold {
+  color: #374151;
+}
+
+.badge-sold i {
+  color: #6b7280;
+}
+
+.badge-viewing {
+  color: #ea580c;
+}
+
+.badge-viewing i {
+  color: #ea580c;
+}
+
+.badge-recommended {
+  color: #059669;
+}
+
+.badge-recommended i {
+  color: #059669;
+}
+
+.pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.current-price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  font-variant: small-caps;
+  color: #000;
+}
+
+.original-price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-decoration: line-through;
+  color: #dc3545;
+}
+
+.discount-badge {
+  min-width: 73px;
+  height: 27px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #ddf8dc;
+  color: #155724;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  white-space: nowrap;
+}
+
+.sku {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Size Selection Buttons */
+.size-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.size-button {
+  width: 52px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #545352;
+  background-color: #ffffff;
+  color: #545352;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.size-button:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.btn-check:checked + .size-button {
+  background-color: #000;
+  color: #ffffff;
+  border-color: #000;
+}
+
+.btn-check:focus + .size-button {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Color Selection */
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-block;
+}
+
+.color-option:hover {
+  border-color: #666;
+  transform: scale(1.1);
+}
+
+.color-check {
+  display: none;
+}
+
+.color-check:checked + .color-option {
+  border-color: #000;
+  border-width: 3px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.color-check:focus + .color-option {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 0;
+  background: white;
+  overflow: hidden;
+  width: 120px;
+  height: 40px;
+}
+
+.quantity-btn {
+  background: none;
+  border: none;
+  border-right: 1px solid #d0d0d0;
+  width: 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quantity-btn:last-child {
+  border-right: none;
+  border-left: 1px solid #d0d0d0;
+}
+
+.quantity-btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.quantity-btn:active {
+  background-color: #e9ecef;
+}
+
+.quantity-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #333;
+  background: transparent;
+  height: 100%;
+  padding: 0;
+}
+
+.quantity-input:focus {
+  outline: none;
+}
+
+/* Remove number input arrows */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Disabled states for variant selection */
+.size-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.size-button.disabled:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.color-option.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.color-option.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.4) 2px,
+    rgba(255, 255, 255, 0.4) 4px
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.color-option.disabled:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  border-color: #ccc;
+}
+
+/* Smooth transitions for variant changes */
+.size-button {
+  transition: all 0.15s ease, opacity 0.2s ease;
+}
+
+.color-option {
+  transition: all 0.15s ease, opacity 0.2s ease;
+}
+
+/* Hide disabled radio inputs */
+input[type="radio"]:disabled {
+  cursor: not-allowed;
+}
+
+/* Variant dropdown styling enhancement */
+#variant-dropdown {
+  transition: border-color 0.15s ease;
+}
+
+#variant-dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Add to Cart Button */
+.btn-dark.btn-lg {
+  width: 680px;
+  height: 48px;
+  min-width: 120px;
+  padding: 10px 16px;
+  gap: 12px;
+  border-radius: 4px;
+  border-width: 1px;
+  background: #0b0a09;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  border: 1px solid #0b0a09;
+}
+
+.btn-dark.btn-lg:hover {
+  background: #1a1918;
+  border-color: #1a1918;
+}
+
+.btn-dark.btn-lg:active {
+  background: #000;
+  border-color: #000;
+}
+
+/* Apple Pay Button */
+.btn-outline-secondary.btn-lg {
+  width: 680px;
+  height: 48px;
+  padding: 14px 138px;
+  gap: 2px;
+  border-radius: 4px;
+  border: 1px solid #0b0a09;
+  background: #ffffff;
+  color: #0b0a09;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btn-outline-secondary.btn-lg:hover {
+  background: #f8f9fa;
+  border-color: #0b0a09;
+  color: #0b0a09;
+}
+
+.btn-outline-secondary.btn-lg:active {
+  background: #e9ecef;
+  border-color: #0b0a09;
+  color: #0b0a09;
+}
+
+/* Hurry Up Text */
+.text-danger {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-variant: small-caps;
+  color: #c22b51;
+}
+
+/* Shipping and Payment Section */
+.shipping-payment-section {
+  margin-top: 2rem;
+}
+
+.shipping-banner {
+  background: #f6f5f4;
+  padding: 16px 20px;
+  border-radius: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+  border: none;
+  width: 100%;
+}
+
+.shipping-banner strong {
+  font-weight: 700;
+}
+
+.shipping-banner .d-flex {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.shipping-icon,
+.clock-icon {
+  color: #000;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.shipping-text {
+  font-size: 12px;
+  color: #000;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+}
+
+.shipping-text strong {
+  font-weight: 600;
+}
+
+.separator {
+  margin: 0 12px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.delivery-text {
+  font-size: 12px;
+  color: #000;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+}
+
+.delivery-text strong {
+  font-weight: 600;
+}
+
+.delivery-time-label {
+  font-weight: 400;
+}
+
+/* Responsive design for shipping banner */
+@media (max-width: 768px) {
+  .shipping-banner {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .shipping-banner .d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .shipping-icon,
+  .clock-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .shipping-text,
+  .delivery-text {
+    font-size: 12px;
+  }
+
+  .separator {
+    margin: 0 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shipping-banner .d-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+/* Promotion List Component Styles */
+.promotion-list {
+  margin: 1.5rem 0;
+}
+
+.promotion-item {
+  padding: 10px 100px 10px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  transition: all 0.15s ease;
+  position: relative;
+  min-height: 60px;
+  position: relative;
+}
+
+.promotion-item:hover {
+  border-color: #9ca3af;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.promotion-item:last-child {
+  margin-bottom: 0;
+}
+
+.promotion-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.promotion-text {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #374151;
+}
+
+.promotion-link {
+  color: #374151;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.promotion-link:hover {
+  color: #111827;
+  text-decoration: underline;
+}
+
+.promotion-logo {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Promotion Logo Image Styling */
+.promotion-logo-img {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.15s ease;
+}
+
+/* Specific styling for each logo */
+.tabby-logo-img {
+  max-height: 28px;
+}
+
+.tamara-logo-img {
+  max-height: 32px;
+}
+
+.mokafaa-logo-img {
+  max-height: 30px;
+}
+
+/* Points Icon Styling */
+.points-icon {
+  color: #d1d5db;
+  font-size: 18px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.points-promotion .promotion-content,
+.mokafaa-promotion .promotion-content {
+  margin-top: 5px;
+}
+
+.points-promotion .points-icon {
+  color: #d1d5db;
+}
+
+.mokafaa-promotion .points-icon {
+  color: #d1d5db;
+}
+
+/* Responsive Design for Promotion List */
+@media (max-width: 768px) {
+  .promotion-item {
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .promotion-content {
+    width: 100%;
+  }
+
+  .promotion-logo {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+
+  .promotion-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-item {
+    padding: 12px 14px;
+  }
+
+  .promotion-text {
+    font-size: 12px;
+  }
+
+  .promotion-logo-img {
+    max-height: 24px;
+  }
+
+  .tabby-logo-img {
+    max-height: 22px;
+  }
+
+  .tamara-logo-img {
+    max-height: 24px;
+  }
+
+  .mokafaa-logo-img {
+    max-height: 22px;
+  }
+}

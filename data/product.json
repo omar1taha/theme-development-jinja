@@ -93,7 +93,8 @@
     "is_infinite": false,
     "badge": null,
     "parent_id": null,
-    "short_description": "",
+    "subtitle": "SUBTITLE HERE",
+    "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo",
     "custom_user_input_fields": [],
     "custom_option_fields": [],
     "attributes": [],
@@ -263,6 +264,16 @@
                 "مشمشي",
                 "اوف وايت",
                 "فستقي"
+            ]
+        },
+        {
+            "id": "def12345-6789-4abc-9def-123456789abc",
+            "name": "Size",
+            "slug": "size-1",
+            "choices": [
+                "XS",
+                "SM",
+                "MD"
             ]
         }
     ],
