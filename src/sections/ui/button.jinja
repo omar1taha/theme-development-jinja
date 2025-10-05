@@ -1,6 +1,0 @@
-<button type="{{ type|default('button') }}" 
-        class="btn {{ variant|default('primary') }} {{ class|default('') }}"
-        {% if disabled %}disabled{% endif %}
-        {% for attr, value in attributes.items() %}{{ attr }}="{{ value }}"{% endfor %}>
-  {{ text }}
-</button>

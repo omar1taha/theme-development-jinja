@@ -42,26 +42,16 @@ Ensure you have the following installed:
    ```
 
 
-## ✨ Features
-
-### 🎨 **Modern UI Components**
-- **Responsive Product Gallery** - Interactive media slider with zoom functionality
-- **Dynamic Product Information** - Real-time pricing with discount badges
-- **Variant Selection** - Color and size options with visual feedback
-- **Customer Reviews** - Star ratings and review summaries
-- **Related Products Slider** - Horizontal scrolling product recommendations
-
 ### 📱 **Fully Responsive Design**
 - **Mobile-First Approach** - Optimized for all device sizes
 - **Flexible Grid System** - Bootstrap-powered responsive layout
-- **Touch-Friendly Navigation** - Swipe gestures and mobile-optimized controls
-- **Adaptive Typography** - Scalable fonts and spacing
 
 ### 🛠️ **Advanced Functionality**
+- **Variant Selection** - Color and size options with visual feedback, updates with each variant change 
 - **Component-Based Architecture** - Modular Jinja2 templates
 - **Reusable Macros** - Consistent pricing and rating components
 - **Interactive Sliders** - JavaScript-powered navigation
-- **Dynamic Content** - JSON-driven product data
+- **Dynamic Content** - JSON-driven product data enhancements, added dummy sizes and hex colors for the arabic color names in starer json
 
 ---
 
@@ -105,57 +95,15 @@ Ensure you have the following installed:
 
 ---
 
-## 🧩 Key Components
-
-### 🖼️ **Media Gallery**
-- Interactive image slider with thumbnails
-- Zoom functionality for detailed product views
-- Touch/swipe support for mobile devices
-
-### 💰 **Pricing Component**
-- Dynamic discount calculations
-- Strike-through original pricing
-- Percentage discount badges
-
-### ⭐ **Rating System**
-- Reusable star rating macro
-- Configurable display options
-- Bootstrap Icons and HTML star support
-
-### 🛒 **Related Products**
-- Horizontal scrolling product grid
-- Touch-enabled navigation
-- Progress bar and arrow controls
-
-### 📱 **Responsive Footer**
-- Multi-column layout on desktop
-- Stacked mobile-friendly design
-- Payment method icons
-- Newsletter subscription
-
----
-
 ## 🎯 Technical Highlights
 
 ### **Frontend Technologies**
 - **Bootstrap 5.3.2** - Responsive framework
 - **Jinja2** - Template engine with macros
-- **Vanilla JavaScript** - Interactive components
-- **CSS Grid & Flexbox** - Modern layout techniques
+- **Vanilla CSS/JavaScript** - Along with Bootstrao Interactive components 
 
-### **Development Features**
-- **Component-Based Architecture** - Modular and maintainable code
-- **Responsive Design** - Mobile-first approach
-- **Accessibility** - ARIA labels and semantic HTML
-- **Performance** - Optimized assets and lazy loading
 
-### **Browser Support**
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
 
----
 
 ## 🔧 Development
 
@@ -169,19 +117,3 @@ Ensure you have the following installed:
 2. Import with `{% from "macros/filename.jinja" import macro_name %}`
 3. Use with `{{ macro_name(parameters) }}`
 
-### **Responsive Development**
-- Use Bootstrap grid classes
-- Add custom CSS media queries for fine-tuning
-- Test across multiple device sizes
-
----
-
-## 📝 Development Notes
-
-- **Product Data:** Loaded from `data/product.json`
-- **Static Assets:** Served from `static/` directory
-- **Templates:** Component-based architecture for reusability
-- **Styling:** CSS organized by component structure
-- **JavaScript:** Modular approach with event-driven components
-
----
