@@ -64,6 +64,15 @@ Ensure you have the following installed:
 
 ---
 
+## Screenshots
+
+<img width="1440" height="717" alt="Screenshot 2025-10-05 at 11 40 18 AM" src="https://github.com/user-attachments/assets/5fb19751-b029-4546-8836-83423b8023bc" />
+<img width="1440" height="717" alt="Screenshot 2025-10-05 at 10 32 08 AM" src="https://github.com/user-attachments/assets/f9af52e6-2fb1-4a1e-b65d-e98e7779d477" />
+<img width="535" height="803" alt="Screenshot 2025-10-05 at 11 09 55 AM" src="https://github.com/user-attachments/assets/cb3da281-8e52-4365-b6d2-d124fa50d1f9" />
+<img width="501" height="722" alt="Screenshot 2025-10-05 at 11 36 40 AM" src="https://github.com/user-attachments/assets/1f6f57db-6456-4e9b-8394-13b9d931e511" />
+<img width="500" height="720" alt="Screenshot 2025-10-05 at 11 36 51 AM" src="https://github.com/user-attachments/assets/bd6c1b8f-983f-40d1-b2f0-9e17a569ea20" />
+
+
 ## 🎯 Technical Highlights
 
 ### **Frontend Technologies**
