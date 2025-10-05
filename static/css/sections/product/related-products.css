@@ -400,7 +400,7 @@
 
   /* Navigation controls responsive */
   .slider-navigation {
-    max-width: 350px;
+    width: 100%;
     gap: 0.75rem;
   }
 
@@ -507,7 +507,7 @@
 
   /* Navigation controls mobile responsive */
   .slider-navigation {
-    max-width: 300px;
+    width: 100%;
     gap: 0.5rem;
     margin-top: 1.5rem;
   }
@@ -526,7 +526,7 @@
 /* Extra small screens - optimize arrow spacing and pricing */
 @media (max-width: 360px) {
   .slider-navigation {
-    max-width: 250px;
+    width: 100%;
     gap: 0.375rem;
   }
 

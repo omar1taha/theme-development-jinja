@@ -47,13 +47,13 @@
 
 {# Render pricing structure #}
 <div class="pricing{% if wrapper_class %} {{ wrapper_class }}{% endif %}">
-  {# Current price (sale price if available, otherwise regular price) #}
-  <span class="{{ current_price_class }}">
-    {{ product.formatted_sale_price or product.formatted_price }}
-  </span>
-  
-  {# Original price and discount badge when on sale #}
+  {# Show prices in order: current price, original price (if on sale), discount badge #}
   {% if is_on_sale %}
+    {# Sale price first #}
+    <span class="{{ current_price_class }}">
+      {{ product.formatted_sale_price }}
+    </span>
+    {# Original price with strikethrough #}
     <span class="{{ original_price_class }}">{{ product.formatted_price }}</span>
     
     {% if show_discount_badge %}
@@ -65,6 +65,11 @@
         {% endif %}
       </span>
     {% endif %}
+  {% else %}
+    {# Regular price only #}
+    <span class="{{ current_price_class }}">
+      {{ product.formatted_price }}
+    </span>
   {% endif %}
 </div>
 

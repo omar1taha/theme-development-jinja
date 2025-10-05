@@ -95,86 +95,39 @@
       data-bs-parent="#productSpecsAccordion"
     >
       <div class="accordion-body">
-        <div class="product-options-grid">
-          <div class="option-item">
-            <div class="option-image">
-              <div class="image-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="m9 11 3-3 3 3" />
-                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
-                </svg>
+        <div class="row">
+          {% set dummy_products = [
+            {'name': 'PRODUCT NAME', 'variant': 'RED • S • FLOWER', 'current_price': '890 SAR', 'original_price': '1,200 SAR'},
+            {'name': 'PRODUCT NAME', 'variant': 'RED • S • FLOWER', 'current_price': '890 SAR', 'original_price': '1,200 SAR'},
+            {'name': 'PRODUCT NAME', 'variant': 'RED • S • FLOWER', 'current_price': '890 SAR', 'original_price': '1,200 SAR'},
+            {'name': 'PRODUCT NAME', 'variant': 'RED • S • FLOWER', 'current_price': '890 SAR', 'original_price': '1,200 SAR'}
+          ] %}
+          
+          {% for product in dummy_products %}
+          <div class="col-12 col-md-6">
+            <div class="option-item">
+              <div class="option-image">
+                <div class="image-placeholder">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="m9 11 3-3 3 3" />
+                    <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="option-content-wrapper">
+                <div class="option-content">
+                  <h3 class="option-title">{{ product.name }}</h3>
+                  <p class="option-variant">{{ product.variant }}</p>
+                  <div class="option-pricing d-flex align-items-baseline gap-2">
+                    <span class="current-price">{{ product.current_price }}</span>
+                    <span class="original-price">{{ product.original_price }}</span>
+                  </div>
+                </div>
+                <button class="btn btn-sm option-btn">Add to cart</button>
               </div>
             </div>
-            <div class="option-content">
-              <h3 class="option-title">PRODUCT NAME</h3>
-              <p class="option-variant">RED • S • FLOWER</p>
-              <div class="option-pricing">
-                <span class="current-price">890 SAR</span>
-                <span class="original-price">1,200 SAR</span>
-              </div>
-            </div>
-            <button class="btn btn-sm">Add to cart</button>
           </div>
-
-          <div class="option-item">
-            <div class="option-image">
-              <div class="image-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="m9 11 3-3 3 3" />
-                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
-                </svg>
-              </div>
-            </div>
-            <div class="option-content">
-              <h3 class="option-title">PRODUCT NAME</h3>
-              <p class="option-variant">RED • S • FLOWER</p>
-              <div class="option-pricing">
-                <span class="current-price">890 SAR</span>
-                <span class="original-price">1,200 SAR</span>
-              </div>
-            </div>
-            <button class="btn btn-sm">Add to cart</button>
-          </div>
-
-          <div class="option-item">
-            <div class="option-image">
-              <div class="image-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="m9 11 3-3 3 3" />
-                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
-                </svg>
-              </div>
-            </div>
-            <div class="option-content">
-              <h3 class="option-title">PRODUCT NAME</h3>
-              <p class="option-variant">RED • S • FLOWER</p>
-              <div class="option-pricing">
-                <span class="current-price">890 SAR</span>
-                <span class="original-price">1,200 SAR</span>
-              </div>
-            </div>
-            <button class="btn btn-sm">Add to cart</button>
-          </div>
-
-          <div class="option-item">
-            <div class="option-image">
-              <div class="image-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="m9 11 3-3 3 3" />
-                  <path d="M21 19H3l3-7 3 2.5 3-2L18 17l3 2z" />
-                </svg>
-              </div>
-            </div>
-            <div class="option-content">
-              <h3 class="option-title">PRODUCT NAME</h3>
-              <p class="option-variant">RED • S • FLOWER</p>
-              <div class="option-pricing">
-                <span class="current-price">890 SAR</span>
-                <span class="original-price">1,200 SAR</span>
-              </div>
-            </div>
-            <button class="btn btn-sm">Add to cart</button>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>

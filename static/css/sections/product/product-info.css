@@ -756,6 +756,16 @@ input[type="radio"]:disabled {
   color: #d1d5db;
 }
 
+/* Hide discount badge on tablets and smaller screens */
+@media (max-width: 768px) {
+  .pricing .discount-badge,
+  .discount-badge,
+  span.discount-badge,
+  .pricing span.discount-badge {
+    display: none !important;
+  }
+}
+
 /* Responsive Design for Promotion List */
 @media (max-width: 768px) {
   .promotion-item {
@@ -802,5 +812,30 @@ input[type="radio"]:disabled {
 
   .mokafaa-logo-img {
     max-height: 22px;
+  }
+
+  /* Hide discount badge on mobile */
+  .pricing .discount-badge,
+  .discount-badge,
+  span.discount-badge,
+  .pricing span.discount-badge {
+    display: none !important;
+  }
+}
+
+/* Extra specific rule to ensure discount badge is hidden on all mobile devices */
+@media screen and (max-width: 768px) {
+  body .discount-badge,
+  body .pricing .discount-badge,
+  body span.discount-badge,
+  body div.pricing span.discount-badge,
+  .product-info .discount-badge,
+  .product-info .pricing .discount-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 }

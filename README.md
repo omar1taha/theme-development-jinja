@@ -2,52 +2,16 @@
 
 A modern, responsive Flask-based e-commerce PDP application featuring a complete product detail page with advanced UI components and interactive features.
 
-
 ## 🚀 Quick Start
 
-### 📋 Prerequisites
-
-Ensure you have the following installed:
-- **Python 3.8+** 
-- **pip** (Python package manager)
-- **(Optional)** `virtualenv` for isolated environments
-
-### 🔧 Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd theme-developer-task
-   ```
-
-2. **(Optional) Create virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate        # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the development server:**
-   ```bash
-   python app.py
-   ```
-
-5. **Open in browser:**
-   ```
-   👉 http://localhost:5002
-   ```
-
-
 ### 📱 **Fully Responsive Design**
+
 - **Mobile-First Approach** - Optimized for all device sizes
 - **Flexible Grid System** - Bootstrap-powered responsive layout
 
 ### 🛠️ **Advanced Functionality**
-- **Variant Selection** - Color and size options with visual feedback, updates with each variant change 
+
+- **Variant Selection** - Color and size options with visual feedback, updates with each variant change
 - **Component-Based Architecture** - Modular Jinja2 templates
 - **Reusable Macros** - Consistent pricing and rating components
 - **Interactive Sliders** - JavaScript-powered navigation
@@ -60,30 +24,35 @@ Ensure you have the following installed:
 ### 📋 Prerequisites
 
 Ensure you have the following installed:
-- **Python 3.8+** 
+
+- **Python 3.8+**
 - **pip** (Python package manager)
 - **(Optional)** `virtualenv` for isolated environments
 
 ### 🔧 Installation
 
 1. **Clone the repository:**
+
    ```bash
-   git clone <repository-url>
-   cd theme-developer-task
+   git clone https://github.com/omar1taha/theme-development-jinja.git
+   cd theme-development-jinja
    ```
 
 2. **(Optional) Create virtual environment:**
+
    ```bash
    python -m venv venv
-   source venv/bin/activate        # On Windows: venv\Scripts\activate
+   source venv/bin/activate        # On Windows: venv\Scripts\activate, On macOS and Linux, use python3 and pip3 instead of python and pip if Python 3 is installed under that name.
    ```
 
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Run the development server:**
+
    ```bash
    python app.py
    ```
@@ -98,22 +67,21 @@ Ensure you have the following installed:
 ## 🎯 Technical Highlights
 
 ### **Frontend Technologies**
+
 - **Bootstrap 5.3.2** - Responsive framework
 - **Jinja2** - Template engine with macros
-- **Vanilla CSS/JavaScript** - Along with Bootstrao Interactive components 
-
-
-
+- **Vanilla CSS/JavaScript** - Along with Bootstrao Interactive components
 
 ## 🔧 Development
 
 ### **Adding New Sections**
+
 1. Create section in `src/sections/`
 2. Add corresponding CSS in `static/css/sections/`
 3. Include in templates using `{% include %}`
 
 ### **Creating Macros**
+
 1. Define macro in `src/macros/`
 2. Import with `{% from "macros/filename.jinja" import macro_name %}`
 3. Use with `{{ macro_name(parameters) }}`
-

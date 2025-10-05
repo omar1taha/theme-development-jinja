@@ -89,3 +89,64 @@ pre {
 .navbar-nav .nav-link {
   color: #000 !important;
 }
+
+/* Mobile-specific rules to hide discount badge with ultra-high specificity */
+@media screen and (max-width: 768px) {
+  /* Maximum specificity selectors for discount badge hiding */
+  .discount-badge,
+  .hide-on-mobile,
+  .pricing .discount-badge,
+  .pricing span.discount-badge,
+  .product-info .discount-badge,
+  .product-info .pricing .discount-badge,
+  .product-info .pricing span.discount-badge,
+  span.discount-badge,
+  span.discount-badge.hide-on-mobile,
+  div.pricing span.discount-badge,
+  div.pricing span.discount-badge.hide-on-mobile,
+  body .discount-badge,
+  body .pricing .discount-badge,
+  body .product-info .discount-badge,
+  body .product-info .pricing .discount-badge,
+  html body .discount-badge,
+  html body .pricing .discount-badge,
+  html body .product-info .pricing .discount-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Ultra-specific for mobile phones */
+@media screen and (max-width: 480px) {
+  /* Attribute selectors to catch any discount badge variations */
+  [class*="discount-badge"],
+  [class*="discount-badge"]:before,
+  [class*="discount-badge"]:after,
+  span[class*="discount-badge"],
+  div[class*="discount-badge"],
+  .pricing [class*="discount-badge"],
+  .product-info [class*="discount-badge"],
+  body [class*="discount-badge"],
+  html body [class*="discount-badge"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+}
