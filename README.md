@@ -94,3 +94,10 @@ Ensure you have the following installed:
 1. Define macro in `src/macros/`
 2. Import with `{% from "macros/filename.jinja" import macro_name %}`
 3. Use with `{{ macro_name(parameters) }}`
+
+
+### **What else can be done?
+1. Implement lazy loading for images
+2. Add SEO meta tags and structured data
+3. Implement caching mechanism for static assets and templates
+4. Add accessibility improvements (ARIA labels, keyboard navigation)
